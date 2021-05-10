@@ -35,10 +35,10 @@
 
     <main class="container-fluid d-flex align-items-start ">
         <div class="sidebar container col-12 col-md-3  ">
-           <form class="border-bottom border-dark">
+           <form class="border-bottom border-dark" id="city-search-form">
             <div class="form-group">
-                <h3 for="formGroupExampleInput " class="font-weight-bolder">Seach City</h3>
-                <input type="text" class="form-control my-3 " id="city" placeholder="Enter City">
+                <h3 for="formGroupExampleInput " class="font-weight-bolder">Search City</h3>
+                <input type="text" class="form-input my-3 w-100 " id="city" placeholder="Enter City">
                 <button type="submit" class="btn btn-primary w-100" id="searchBtn">Search</button>
               </div> 
            </form> 
@@ -46,17 +46,24 @@
            <div class=" my-3" id="">
                <h3>Search History</h3>
                <div class = "search-history" id = "search-history"></div>
+               <button id="clear-history" class="btn btn-secondary">Clear History</button>
            </div>
 
         </div>
         
 
-        <div class="search-result container col-12 col-md-9" id="current-forecast">
-            <div class="current-day-result border border-dark rounded col-12" >
-              <h2 id="searched-city"></h2>
-              <div id="current-day-display" class="list-group"></div>
+        <div class="search-result container col-12 col-md-9" >
+            <div class=" row  selected-city" id="current-forecast" >
+              <div class="col-12">
+                <h2 id="searched-city"></h2>
+                <div id="current-weather-container" class="list-group"></div>
+              </div>
             </div>
-            <div id="5-day-forecast " class="row border rounded col-12"></div>
+
+            <div id="5-day-forecast " class="row ">
+              <h2 class= "col-12" id = "forecast"></h2>
+              <div class = "d-flex" id = "fiveday-container"></div>
+            </div>
 
         </div>
 
